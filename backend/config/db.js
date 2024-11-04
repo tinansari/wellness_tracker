@@ -1,10 +1,14 @@
 // db.js
 
 const mongoose = require('mongoose');
+require('dotenv').config(); // Load environment variables
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://localhost:27017/wellness_tracker');
+    await mongoose.connect(process.env.MONGODB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
     console.log('MongoDB connected');
   } catch (error) {
     console.error('Database connection error:', error);
@@ -13,4 +17,3 @@ const connectDB = async () => {
 };
 
 module.exports = connectDB;
-
