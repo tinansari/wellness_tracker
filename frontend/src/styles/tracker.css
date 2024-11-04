@@ -1,0 +1,200 @@
+/* tracker.css */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #faf3f0; /* Light nude background */
+  color: #704b4b; /* Soft brownish-pink text color */
+}
+
+.tracker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  width: 100vw;
+  max-width: 1400px; /* Increased width to better center the calendar and sidebar */
+}
+
+.tracker-title {
+  text-align: center;
+  color: #e7b8b8;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* Horizontal white line under main title */
+.tracker-title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  margin-top: 8px;
+}
+
+.tracker-main {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 200px); /* Adjust height to fill the screen */
+}
+
+.tracker-calendar {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  padding-right: 2rem;
+  border-right: 2px solid #f7c5cc; /* Thicker pink vertical line between habit names and first day */
+}
+
+.calendar-header, .calendar-row {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(7, 1fr); /* Adjusted column sizes for better spacing */
+  padding: 1rem 0; /* Increased padding to spread out items */
+  align-items: center;
+}
+
+.calendar-header {
+  font-weight: 600;
+  color: #d9a7a7;
+  font-size: 1.2rem; /* Increased font size for header */
+}
+
+.calendar-habit-name {
+  font-weight: 500;
+  color: #704b4b;
+  padding-left: 0.5rem;
+  font-size: 1.2rem; /* Increased font size for habit names */
+}
+
+.calendar-checkbox {
+  width: 28px; /* Increased checkbox size */
+  height: 28px;
+  border-radius: 5px;
+  background-color: #f0e6e6;
+  accent-color: #f7c5cc; /* Light pink */
+}
+
+/* Pink horizontal lines between each habit row */
+.calendar-row {
+  border-bottom: 1px solid #f7c5cc;
+}
+
+.tracker-sidebar {
+  flex: 1.5;
+  padding: 1.5rem;
+  margin-left: 1.5rem;
+  background-color: #fff9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem; /* Add gap to separate items */
+}
+
+/* Sidebar habit title with thicker white line */
+.tracker-sidebar h3 {
+  color: #e7b8b8;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.tracker-sidebar h3::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  margin-top: 6px;
+}
+
+.tracker-sidebar p {
+  margin: 0.5rem 0;
+  color: #704b4b;
+}
+
+.description-container {
+  width: 100%;
+}
+
+.description-container label {
+  font-weight: 600;
+  color: #704b4b;
+  margin-bottom: 0.3rem;
+}
+
+.description-container textarea {
+  width: 100%;
+  height: 60px;
+  padding: 0.5rem;
+  border: 1px solid #e3c4b1;
+  border-radius: 4px;
+  resize: none;
+  background-color: #ffffff;
+  color: #704b4b;
+  font-size: 0.9rem;
+}
+
+.char-counter {
+  font-size: 0.75rem;
+  color: #d9a7a7;
+  text-align: right;
+  margin-top: 0.2rem;
+}
+
+.save-button {
+  padding: 0.4rem 1rem;
+  background-color: #f7c5cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.save-button:hover {
+  background-color: #f2a5ae;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  color: #e7b8b8;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+.tracker-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tracker-controls input[type="text"], .tracker-controls select {
+  padding: 0.75rem;
+  border: 1px solid #e3c4b1;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #704b4b;
+  font-size: 1rem;
+}
+
+.tracker-controls button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  background-color: #f7c5cc;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.tracker-controls button:hover {
+  background-color: #f2a5ae;
+}
+

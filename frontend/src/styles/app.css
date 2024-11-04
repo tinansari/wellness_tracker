@@ -1,0 +1,29 @@
+/* app.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5; /* Light nude background */
+    color: #333; /* Darker text for contrast */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #D8BFAA; /* Soft nude for heading */
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 600px;
+    padding: 1.5rem;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
